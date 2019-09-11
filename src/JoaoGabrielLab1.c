@@ -1,12 +1,16 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdbool.h>
+#include <math.h>
 
 int main (int argc, char** argv)
 {
     int opcao_de_menu;
     int opcao;
     bool sair = false;
+    float numero1;
+    float numero2;
+    char operacao;
 
     do 
     {
@@ -70,9 +74,46 @@ int main (int argc, char** argv)
                             puts("1");
                     }
                 }
-
-
                 break;
+
+            case 3:
+
+                printf("Digite dois números com a operação (n1 operação n2): ");
+                scanf("%f %c %f", &numero1, &operacao, &numero2);
+
+                switch (operacao)
+                {
+                    case '+':
+                        printf("A soma de %.2f + %.2f é igual a %.2f\n", numero1, numero2, numero1 + numero2);
+                        break;
+                    case '-':
+                        printf("A subtração de %.2f - %.2f é igual a %.2f\n", numero1, numero2, numero1 - numero2);
+                        break;
+                    case '*':
+                        printf("A multiplicação de %.2f * %.2f é igual a %.2f\n", numero1, numero2, numero1 * numero2);
+                        break;
+                    case '/':
+                        if (numero2 != 0)
+                            printf("A divisão de %.2f / %.2f é igual a %.2f\n", numero1, numero2, numero1 / numero2);
+                        else
+                            puts("Divisão por 0");
+                        break;
+                }
+                break;
+
+            case 4:
+                printf("Digite o número de vezes que a operação de dobradura deverá ser realizada: ");
+                scanf("%d", &opcao);
+
+                if (opcao < 0)
+                    break;
+                else
+                {
+                    int resultado = pow(pow(2, opcao) + 1, 2);
+                    printf("O número de dobraduras é igual a %d\n", resultado);
+                }
+                break;
+
             case 5:
                 sair = true;
                 puts("Saindo do programa...");
