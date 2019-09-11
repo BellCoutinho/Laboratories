@@ -108,10 +108,7 @@ int main (int argc, char** argv)
                 if (opcao < 0)
                     break;
                 else
-                {
-                    int resultado = pow(pow(2, opcao) + 1, 2);
-                    printf("O número de dobraduras é igual a %d\n", resultado);
-                }
+                    printf("O número de dobraduras é igual a %d\n", (int) pow(pow(2, opcao) + 1, 2));
                 break;
 
             case 5:
