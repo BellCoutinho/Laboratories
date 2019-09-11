@@ -48,6 +48,31 @@ int main (int argc, char** argv)
                     puts("");
                 }
                 break;
+
+            case 2:
+                printf("Digite um número positivo: ");
+                scanf("%d", &opcao);
+
+                if (opcao < 1)
+                    puts("1");
+                else
+                {
+                    while (opcao != 1)
+                    {
+                        if (opcao % 2 == 0)
+                            opcao /= 2;
+                        else
+                            opcao = 3*opcao + 1;
+
+                        if (opcao != 1)
+                            printf("%d -> ", opcao);
+                        else
+                            puts("1");
+                    }
+                }
+
+
+                break;
             case 5:
                 sair = true;
                 puts("Saindo do programa...");
