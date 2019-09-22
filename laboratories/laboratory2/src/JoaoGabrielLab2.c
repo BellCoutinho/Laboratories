@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-static void movement (int, int);
+static void movement (int lines, int columns, char array[lines][columns]);
 static void fill_array (int lines, int columns, char array[lines][columns]); 
 static void display_array (int lines, int columns, char array[lines][columns]);
 
@@ -14,17 +14,67 @@ int main (int argc, char** argv)
 
     char array[lines][columns];
     fill_array (lines, columns, array); 
+    movement(lines, columns, array);
     display_array (lines, columns, array);
 
     return EXIT_SUCCESS;
 }
 
 static void
-movement (int x, int y)
+movement (int lines, int columns, char array[lines][columns])
 {
-    if (x && y == 0)
-        return;
+    int x;
+    int y;
+    int row = 0;
+    int column = 0;
+    int x_total = 0;
+    int y_total = 0;
+    int x_times = 0;
+    int y_times = 0;
+    char tmp;
 
+    do
+    {
+        
+        scanf("%d %d", &y, &x);
+        x_total += x;
+        y_total += y;
+    } while (y || x);
+
+    x_times = x_total%columns < 0? x_total%columns + columns: x_total%columns;
+    y_times = y_total%lines < 0? y_total%lines + lines: y_total%lines;
+    
+    if (y_total != 0)
+    {
+        for (column = 0; column < columns; column++)
+        {
+            for (int turns = 0; turns < y_times; turns++)
+            {
+                for (row = 0; row < lines - 1; row++)
+                {
+                    tmp = array[row][column];
+                    array[row][column] = array[row + 1][column];
+                    array[row + 1][column] = tmp;
+                }
+            }
+        }
+    }
+
+    if (x_total != 0)
+    {
+        for (row = 0; row < lines; row++)
+        {
+            for (int turns = 0; turns <x_times; turns++)
+            {
+                for (column = 0; column < columns - 1; column++)
+                {
+                    tmp = array[row][column];
+                    array[row][column] = array[row][column + 1];
+                    array[row][column + 1] = tmp;
+                }
+            }
+        }
+    }
 }
 
 static void
