@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <stdbool.h>
 
 static void movement (int lines, int columns, char array[lines][columns]);
 static void fill_array (int lines, int columns, char array[lines][columns]); 
@@ -10,12 +11,18 @@ int main (int argc, char** argv)
     int lines;
     int columns;
 
-    scanf ("%d %d", &lines, &columns);
+    do
+    {
+        scanf ("%d %d", &lines, &columns);
 
-    char array[lines][columns];
-    fill_array (lines, columns, array); 
-    movement(lines, columns, array);
-    display_array (lines, columns, array);
+        if ((lines && columns) == 0)
+            break;
+
+        char array[lines][columns];
+        fill_array (lines, columns, array); 
+        movement(lines, columns, array);
+        display_array (lines, columns, array);
+    } while (true);
 
     return EXIT_SUCCESS;
 }
@@ -43,6 +50,7 @@ movement (int lines, int columns, char array[lines][columns])
 
     x_times = x_total%columns < 0? x_total%columns + columns: x_total%columns;
     y_times = y_total%lines < 0? y_total%lines + lines: y_total%lines;
+    printf("X times = %d\n", x_times);
     
     if (y_total != 0)
     {
@@ -50,6 +58,7 @@ movement (int lines, int columns, char array[lines][columns])
         {
             for (int turns = 0; turns < y_times; turns++)
             {
+                printf("Numbers: %d\n", turns+1);
                 for (row = 0; row < lines - 1; row++)
                 {
                     tmp = array[row][column];
@@ -64,13 +73,13 @@ movement (int lines, int columns, char array[lines][columns])
     {
         for (row = 0; row < lines; row++)
         {
-            for (int turns = 0; turns <x_times; turns++)
+            for (int turns = 0; turns < x_times; turns++)
             {
-                for (column = 0; column < columns - 1; column++)
+                for (column = columns - 1; column > 0; column--)
                 {
                     tmp = array[row][column];
-                    array[row][column] = array[row][column + 1];
-                    array[row][column + 1] = tmp;
+                    array[row][column] = array[row][column - 1];
+                    array[row][column - 1] = tmp;
                 }
             }
         }
