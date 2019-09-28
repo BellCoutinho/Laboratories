@@ -50,7 +50,6 @@ movement (int lines, int columns, char array[lines][columns])
 
     x_times = x_total%columns < 0? x_total%columns + columns: x_total%columns;
     y_times = y_total%lines < 0? y_total%lines + lines: y_total%lines;
-    printf("X times = %d\n", x_times);
     
     if (y_total != 0)
     {
@@ -58,7 +57,6 @@ movement (int lines, int columns, char array[lines][columns])
         {
             for (int turns = 0; turns < y_times; turns++)
             {
-                printf("Numbers: %d\n", turns+1);
                 for (row = 0; row < lines - 1; row++)
                 {
                     tmp = array[row][column];
