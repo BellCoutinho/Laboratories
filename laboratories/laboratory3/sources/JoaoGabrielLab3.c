@@ -69,10 +69,10 @@ fill_dictionary (int number_words, char dict[number_words][COLUMNS][MEANING_SIZE
     {
         setbuf(stdin, NULL);
         fgets(&dict[row][KEY][BEGINNING_MEANING], MEANING_SIZE, stdin);
-	strtok(&dict[row][KEY][BEGINNING_MEANING], "\n");
+	    strtok(&dict[row][KEY][BEGINNING_MEANING], "\n");
         setbuf(stdin, NULL);
         fgets(&dict[row][VALUE][BEGINNING_MEANING], MEANING_SIZE, stdin);
-	strtok(&dict[row][VALUE][BEGINNING_MEANING], "\n");
+	    strtok(&dict[row][VALUE][BEGINNING_MEANING], "\n");
     }
 }
 
@@ -83,7 +83,7 @@ fill_message (int number_lines, char message[number_lines][MESSAGE_SIZE])
     {
         setbuf(stdin, NULL);
         fgets(&message[row][BEGINNING_MESSAGE], MESSAGE_SIZE, stdin);
-	strtok(&message[row][BEGINNING_MESSAGE], "\n");
+	    strtok(&message[row][BEGINNING_MESSAGE], "\n");
     }
 }
 
@@ -114,7 +114,7 @@ decode_message (int number_words, int number_lines,
 			search_value (tmp, number_words, dict);
 		}
         }
-        printf("\n");
+        printf("\n\n");
     }
 }
 
@@ -126,7 +126,7 @@ search_value (char str[MESSAGE_SIZE], int number_words, char dict[number_words][
         if (strcmp(str, &dict[row][KEY][BEGINNING_MEANING]) == 0)
         {
             printf("%s ", &dict[row][VALUE][BEGINNING_MEANING]);
-	    return;
+	        return;
         }
     }
 
