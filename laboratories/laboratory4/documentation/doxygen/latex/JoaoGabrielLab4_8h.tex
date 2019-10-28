@@ -1,0 +1,94 @@
+\hypertarget{JoaoGabrielLab4_8h}{}\section{/home/thebell/\+Projects/\+Monitoring\+Projects/\+Programming\+Laboratory1/\+Laboratories/laboratories/laboratory4/sources/includes/src/\+Joao\+Gabriel\+Lab4.h File Reference}
+\label{JoaoGabrielLab4_8h}\index{/home/thebell/Projects/MonitoringProjects/ProgrammingLaboratory1/Laboratories/laboratories/laboratory4/sources/includes/src/JoaoGabrielLab4.h@{/home/thebell/Projects/MonitoringProjects/ProgrammingLaboratory1/Laboratories/laboratories/laboratory4/sources/includes/src/JoaoGabrielLab4.h}}
+
+
+Protótipos de funções e macros para o laboratório 4.  
+
+
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{JoaoGabrielLab4_8h_a10cfa31566d0e8ab864ae002fff02150}\label{JoaoGabrielLab4_8h_a10cfa31566d0e8ab864ae002fff02150}} 
+\#define {\bfseries N\+U\+M\+B\+E\+R\+\_\+\+C\+O\+L\+U\+M\+NS}~2
+\item 
+\mbox{\Hypertarget{JoaoGabrielLab4_8h_a834e9a379307f869a10f4da078be5786}\label{JoaoGabrielLab4_8h_a834e9a379307f869a10f4da078be5786}} 
+\#define {\bfseries N\+A\+M\+E\+\_\+\+S\+I\+ZE}~16
+\item 
+\mbox{\Hypertarget{JoaoGabrielLab4_8h_ac85cb3274653333494684855e563670c}\label{JoaoGabrielLab4_8h_ac85cb3274653333494684855e563670c}} 
+\#define {\bfseries N\+U\+M\+B\+E\+R\+\_\+\+S\+T\+U\+D\+E\+N\+TS}~3
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+char $\ast$ \mbox{\hyperlink{JoaoGabrielLab4_8h_aa2cebc52822b3289fb9462b3cd3d7729}{student\+\_\+status}} (const char name\mbox{[}N\+A\+M\+E\+\_\+\+S\+I\+ZE\mbox{]})
+\begin{DoxyCompactList}\small\item\em Retorna a situação do aluno passado por parâmetro. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{JoaoGabrielLab4_8h_a4158f4ecd85b33f768e4d281f4400295}{student\+\_\+names}} (char names\mbox{[}$\,$\mbox{]}\mbox{[}N\+U\+M\+B\+E\+R\+\_\+\+C\+O\+L\+U\+M\+NS\mbox{]}\mbox{[}N\+A\+M\+E\+\_\+\+S\+I\+ZE\mbox{]})
+\begin{DoxyCompactList}\small\item\em Pega da entrada padrão os nomes dos alunos. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{JoaoGabrielLab4_8h_a98b403deed93459731cd97d50b9a3ec7}{show}} (char names\mbox{[}$\,$\mbox{]}\mbox{[}N\+U\+M\+B\+E\+R\+\_\+\+C\+O\+L\+U\+M\+NS\mbox{]}\mbox{[}N\+A\+M\+E\+\_\+\+S\+I\+ZE\mbox{]})
+\begin{DoxyCompactList}\small\item\em Mostra os nomes e a situação dos alunos. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Protótipos de funções e macros para o laboratório 4. 
+
+\begin{DoxyAuthor}{Author}
+João Gabriel Silva Coutinho (Bell Coutinho) 
+\end{DoxyAuthor}
+\begin{DoxyRefDesc}{Bug}
+\item[\mbox{\hyperlink{bug__bug000001}{Bug}}]Nenhum bug conhecido. \end{DoxyRefDesc}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{JoaoGabrielLab4_8h_a98b403deed93459731cd97d50b9a3ec7}\label{JoaoGabrielLab4_8h_a98b403deed93459731cd97d50b9a3ec7}} 
+\index{JoaoGabrielLab4.h@{JoaoGabrielLab4.h}!show@{show}}
+\index{show@{show}!JoaoGabrielLab4.h@{JoaoGabrielLab4.h}}
+\subsubsection{\texorpdfstring{show()}{show()}}
+{\footnotesize\ttfamily void show (\begin{DoxyParamCaption}\item[{char}]{names\mbox{[}$\,$\mbox{]}\mbox{[}\+N\+U\+M\+B\+E\+R\+\_\+\+C\+O\+L\+U\+M\+N\+S\mbox{]}\mbox{[}\+N\+A\+M\+E\+\_\+\+S\+I\+Z\+E\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Mostra os nomes e a situação dos alunos. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em names} & Array3d onde os alunos e a suas situações estão armazenados.\\
+\hline
+\end{DoxyParams}
+Mostra os nomes e situação dos alunos na saida padrão. Pegando o nome na primeira coluna do array3D e a situação do mesmo na coluna 1 do array3D. \mbox{\Hypertarget{JoaoGabrielLab4_8h_a4158f4ecd85b33f768e4d281f4400295}\label{JoaoGabrielLab4_8h_a4158f4ecd85b33f768e4d281f4400295}} 
+\index{JoaoGabrielLab4.h@{JoaoGabrielLab4.h}!student\_names@{student\_names}}
+\index{student\_names@{student\_names}!JoaoGabrielLab4.h@{JoaoGabrielLab4.h}}
+\subsubsection{\texorpdfstring{student\_names()}{student\_names()}}
+{\footnotesize\ttfamily void student\+\_\+names (\begin{DoxyParamCaption}\item[{char}]{names\mbox{[}$\,$\mbox{]}\mbox{[}\+N\+U\+M\+B\+E\+R\+\_\+\+C\+O\+L\+U\+M\+N\+S\mbox{]}\mbox{[}\+N\+A\+M\+E\+\_\+\+S\+I\+Z\+E\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Pega da entrada padrão os nomes dos alunos. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ out}}  & {\em names} & Array3d onde os nomes dos alunos e a sua situação iram ficar.\\
+\hline
+\end{DoxyParams}
+Função pega os nomes dos alunos para o array3D e passa para a função de calcular a situação do aluno onde o valor de retorno é colocar no array3D. \mbox{\Hypertarget{JoaoGabrielLab4_8h_aa2cebc52822b3289fb9462b3cd3d7729}\label{JoaoGabrielLab4_8h_aa2cebc52822b3289fb9462b3cd3d7729}} 
+\index{JoaoGabrielLab4.h@{JoaoGabrielLab4.h}!student\_status@{student\_status}}
+\index{student\_status@{student\_status}!JoaoGabrielLab4.h@{JoaoGabrielLab4.h}}
+\subsubsection{\texorpdfstring{student\_status()}{student\_status()}}
+{\footnotesize\ttfamily char$\ast$ student\+\_\+status (\begin{DoxyParamCaption}\item[{const char}]{name\mbox{[}\+N\+A\+M\+E\+\_\+\+S\+I\+Z\+E\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Retorna a situação do aluno passado por parâmetro. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em name} & Nome no aluno a ser verificado a situação. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Retorna a situação do aluno.
+\end{DoxyReturn}
+Função receber o nome do aluno, coleta as notas do mesmo para calcular a média e retorna sua situação, aprovado caso a média seja superior a 7.\+0, do contrário retorna reprovado.
+
+\begin{DoxyReturn}{Returns}
+Retorna uma constante literal com a situação do aluno. Aprovado caso tenha passado, docontrário reprovado. 
+\end{DoxyReturn}
